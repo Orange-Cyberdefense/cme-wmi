@@ -18,7 +18,8 @@ cme wmi targets.txt -d <DOMAIN> -u <USER> -p <PASS> [-H <HASH>] -M mimikatz
 ```
 git clone https://github.com/byt3bl33d3r/CrackMapExec.git
 git clone https://github.com/Orange-Cyberdefense/cme-wmi.git
-cp -r cme-wmi/* CrackMapExec/cme/protocols
+cp -r cme-wmi/wmi CrackMapExec/cme/protocols
+cp cme-wmi/wmi.py CrackMapExec/cme/protocols
 sed -ri "s/supported_protocols = \[(.*)\]/supported_protocols = \[\1, 'wmi'\]/" CrackMapExec/cme/modules/mimikatz.py #adding the new 'wmi' protocol manually to the supported protocols of the mimikatz.py module
 ```
 
