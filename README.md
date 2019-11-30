@@ -27,7 +27,7 @@ Rebuild CrackMapExec afterwards.
 
 ## TODO
 
-- add --sam and --lsa options
+- add --sam and --lsa options (for secrets an idea is using nishang's Get-LsaSecret as a new module instead of Invoke-Mimikatz)
 - fix loggging error that makes mimikatz fail when using options -o COMMAND (works if manually modified in the mimikatz.py)
 - add enum_host() function
 - port to Python3 ;)
