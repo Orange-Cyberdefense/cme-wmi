@@ -11,7 +11,9 @@ Currently only tested for the Mimikatz module.
 ```
 cme wmi targets.txt -d <DOMAIN> -u <USER> -p <PASS> [-H <HASH>] -M mimikatz
 ```
+![usage](https://github.com/Orange-Cyberdefense/cme-wmi/blob/master/example.png)
 
+As shown, commands are sent only via DCOM (TCP/135).
 
 ## Install
 
