@@ -4,7 +4,7 @@ Experimental plugin for CrackMapExec that adds a new protocol based on pure WMI 
 
 Remote WMI access must be configured on the target. No SMB services are needed. CrackMapExec's HTTP server is not used. All command output is obtained exclusively using the WMI access, through storage in the WMI repository.
 
-Currently only tested for the Mimikatz module. 
+Currently only tested with CrackMapExec's Mimikatz module. 
 
 ## Usage
 
@@ -22,7 +22,7 @@ git clone https://github.com/byt3bl33d3r/CrackMapExec.git
 git clone https://github.com/Orange-Cyberdefense/cme-wmi.git
 cp -r cme-wmi/wmi CrackMapExec/cme/protocols
 cp cme-wmi/wmi.py CrackMapExec/cme/protocols
-sed -ri "s/supported_protocols = \[(.*)\]/supported_protocols = \[\1, 'wmi'\]/" CrackMapExec/cme/modules/mimikatz.py #adding the new 'wmi' protocol manually to the supported protocols of the mimikatz.py module
+sed -ri "s/supported_protocols = \[(.*)\]/supported_protocols = \[\1, 'wmi'\]/" CrackMapExec/cme/modules/mimikatz.py #adding the new 'wmi' protocol manually to the list of supported protocols of the mimikatz.py module
 ```
 
 Rebuild CrackMapExec afterwards.
